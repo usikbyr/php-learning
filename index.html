@@ -1,19 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Amazing Shop</title>
+    <title>L'Atelier Cuir - Maroquinerie d'Exception</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div>
-        <h1>Welcome to Amazing Shop!</h1>
-        <p>Your one-stop shop for all your needs.</p>
-        <ul>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-        </ul>
-    </div>
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo"><a href="index.html">L'Atelier Cuir</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="products.html">Collections</a></li>
+                    <li><a href="#">L'Atelier</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#"><img src="assets/icons/cart.svg" alt="Panier" class="cart-icon"></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-content">
+            <h2>Savoir-faire et élégance intemporelle</h2>
+            <a href="products.html" class="btn-primary">Découvrir la Collection</a>
+        </div>
+    </section>
+
+    <section class="featured-products container">
+        <h3>Nos Pièces Phares</h3>
+        <div class="product-grid">
+            <div class="product-item">
+                <img src="assets/images/sac-classique-noir.jpg" alt="Sac Classique Noir">
+                <h4>Sac Élégance</h4>
+                <p>349 €</p>
+                <a href="product-detail.html?id=sac-elegance" class="btn-secondary">Voir le produit</a>
+            </div>
+            <div class="product-item">
+                <img src="assets/images/portefeuille-marron.jpg" alt="Portefeuille Marron">
+                <h4>Portefeuille Cuir</h4>
+                <p>129 €</p>
+                <a href="product-detail.html?id=portefeuille-cuir" class="btn-secondary">Voir le produit</a>
+            </div>
+             <div class="product-item">
+                <img src="assets/images/ceinture-fine.jpg" alt="Ceinture Fine">
+                <h4>Ceinture Raffinée</h4>
+                <p>89 €</p>
+                <a href="product-detail.html?id=ceinture-raffinee" class="btn-secondary">Voir le produit</a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="main-footer">
+        <div class="container">
+            <p>&copy; 2023 L'Atelier Cuir. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
