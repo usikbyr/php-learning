@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Collections - L'Atelier Cuir</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="collection-header container">
+        <h1>Nos Collections</h1>
+        <p>Explorez l'art du cuir à travers nos créations artisanales.</p>
+    </section>
+
+    <main class="container">
+        <div id="product-list" class="product-grid">
+            </div>
+    </main>
+
+    <script src="js/products.js"></script>
+    <script>
+        const listContainer = document.getElementById('product-list');
+        products.forEach(product => {
+            listContainer.innerHTML += `
+                <div class="product-item">
+                    <img src="${product.image}" alt="${product.name}">
+                    <h4>${product.name}</h4>
+                    <p>${product.price} €</p>
+                    <a href="product-detail.html?id=${product.id}" class="btn-secondary">Voir les détails</a>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>

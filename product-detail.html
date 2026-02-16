@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Détails du Produit - L'Atelier Cuir</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container product-detail-view">
+        <div id="product-content" class="detail-wrapper">
+            </div>
+    </main>
+
+    <script src="js/products.js"></script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const productId = params.get('id');
+        const product = products.find(p => p.id === productId);
+
+        const content = document.getElementById('product-content');
+        if (product) {
+            content.innerHTML = `
+                <div class="image-gallery">
+                    <img src="${product.image}" alt="${product.name}">
+                </div>
+                <div class="info-panel">
+                    <span class="category">${product.category}</span>
+                    <h1>${product.name}</h1>
+                    <p class="price">${product.price} €</p>
+                    <p class="description">${product.description}</p>
+                    <button class="btn-primary">Ajouter au panier</button>
+                    <div class="details-extra">
+                        <p><strong>Matière :</strong> 100% Cuir de veau</p>
+                        <p><strong>Livraison :</strong> Offerte sous 3 à 5 jours</p>
+                    </div>
+                </div>
+            `;
+        } else {
+            content.innerHTML = "<h2>Produit non trouvé.</h2>";
+        }
+    </script>
+</body>
+</html>
